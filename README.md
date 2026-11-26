@@ -212,7 +212,14 @@ ablation) and "RVQ-4L (5-seed mean)" in Table 5 (RVQ sweep); RVQ 8L×128 BPC-8
 is "8L BPC-8" in Table 6. In this README the heading "Supervised
 configurations" and the phrase "supervised trainers" cover every model trained
 on labels, including those with the BPC-8 objective, as opposed to the
-self-supervised runs.
+self-supervised runs. The paragraph "Seed variance across the RVQ scaling
+range" of the paper reports five-seed runs of the layer sweep at two, four and
+eight layers. Those at four and eight layers are RVQ 4L×128 BPC-8 and
+RVQ 8L×128 BPC-8. Those at two layers, "the RVQ-L2 runs of this sweep" in the
+paper, are a second five-seed set of the 2L BPC-8 command above, separate from
+the 2L BPC-8 row of Table 6 and from the single run RVQ-L2 below: the two
+five-seed sets have the same configuration and seeds and were trained on
+different GPU models.
 
 `scripts/train_rvq_bpc.py` trains the RVQ model on broad phonetic classes
 (`--bpc_type 8class` or `3class_vus`): its loss is the broad-class
@@ -491,6 +498,11 @@ trained FSQ [3]^16 (FSQ-16d) checkpoint (`--checkpoint`, default
 `$PROTOSPEECH_ARTEFACTS_ROOT/checkpoints/fsq_16d_seed42/best.pt`) and the
 dev-clean data; without the checkpoint it prints `SKIP` and exits with
 status 0.
+
+## Licence
+
+The code in this repository is released under the MIT License. The full text
+is in `LICENSE`.
 
 ## Citation
 

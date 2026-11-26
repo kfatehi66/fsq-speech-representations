@@ -1,5 +1,5 @@
 """
-wav2vec 2.0-faithful SSL encoder with a pluggable quantiser.
+wav2vec 2.0-style SSL encoder with a pluggable quantiser.
 
     waveform --> CNN feature encoder --> z  (B, T, 512)
                                          |

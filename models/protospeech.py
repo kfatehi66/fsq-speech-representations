@@ -140,7 +140,7 @@ class ProtoSpeech(nn.Module):
             dropout=config.dropout,
         )
 
-        # Prototype layer (novel contribution)
+        # Prototype layer
         if config.use_ema_prototypes:
             # EMA-based prototype layer (VQ-VAE style), counters train/val collapse
             self.prototype_layer = PrototypeLayerEMA(

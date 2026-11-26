@@ -239,7 +239,10 @@ def compute_span_mask(shape, mask_prob: float = 0.065, mask_length: int = 10,
         contrastive loss).
 
     Spans may overlap, as in fairseq, so the realised masked fraction is
-    slightly below num_spans*mask_length/T.
+    slightly below num_spans*mask_length/T. With the defaults, the spans cover
+    at most 6.5% of the frames of an utterance longer than about 3 s;
+    wav2vec 2.0 uses 0.065 as the proportion of frames sampled as span starts,
+    which masks about 49% of the frames (Baevski et al., 2020).
 
     Args:
         shape: (B, T).
