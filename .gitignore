@@ -1,0 +1,30 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Checkpoints
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Outputs and logs
+outputs/
+logs/
+*.log
+*.out
+*.err
+
+# Data, manifests and alignments (the default artefacts root is ./artefacts)
+artefacts/
+data/*
+!data/*.py
+*.wav
+*.flac
+*.TextGrid
+*.json
+
+# Python environments
+venv/
+.venv/
